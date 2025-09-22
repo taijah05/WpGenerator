@@ -42,11 +42,11 @@ function diceRoll() {
         document.getElementById("rollFourOne").innerHTML = lightGadgets[randomGadgetsTwo];
         document.getElementById("rollFourTwo").innerHTML = lightGadgets[randomGadgetsThree];
 
-        if (lightGadgets[randomGadgetsTwo] == lightGadgets[randomGadgetsOne]) {
+        if (lightGadgets[randomGadgetsTwo] === lightGadgets[randomGadgetsOne]) {
 
             var randomGadgetsTwo = Math.floor(Math.random()*lightGadgets.length);
             document.getElementById("rollFourOne").innerHTML = lightGadgets[randomGadgetsTwo];
-        } else if (lightGadgets[randomGadgetsThree] == lightGadgets[randomGadgetsOne] ||lightGadgets[randomGadgetsThree] == lightGadgets[randomGadgetsTwo]) {
+        } else if (lightGadgets[randomGadgetsThree] === lightGadgets[randomGadgetsOne] ||lightGadgets[randomGadgetsThree] === lightGadgets[randomGadgetsTwo]) {
 
             var randomGadgetsThree = Math.floor(Math.random()*lightGadgets.length);
             document.getElementById("rollFourTwo").innerHTML = lightGadgets[randomGadgetsThree];
@@ -72,7 +72,7 @@ function diceRoll() {
         document.getElementById("rollFourOne").innerHTML = mediumGadgets[randomGadgetsTwo];
         document.getElementById("rollFourTwo").innerHTML = mediumGadgets[randomGadgetsThree];
 
-        if (randomGadgetsTwo == randomGadgetsOne) {
+        if (randomGadgetsTwo === randomGadgetsOne) {
 
             randomGadgetsTwo = Math.floor(Math.random()*mediumGadgets.length);
             document.getElementById("rollFourOne").innerHTML = mediumGadgets[randomGadgetsTwo];
@@ -101,7 +101,7 @@ function diceRoll() {
         document.getElementById("rollFourOne").innerHTML = heavyGadgets[randomGadgetsTwo];
         document.getElementById("rollFourTwo").innerHTML = heavyGadgets[randomGadgetsThree];
 
-        if (lightGadgets[randomGadgetsTwo] == heavyGadgets[randomGadgetsOne]) {
+        if (lightGadgets[randomGadgetsTwo] === heavyGadgets[randomGadgetsOne]) {
 
             var randomGadgetsTwo = Math.floor(Math.random()*heavyGadgets.length);
             document.getElementById("rollFourOne").innerHTML = heavyGadgets[randomGadgetsTwo];
