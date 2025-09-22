@@ -35,26 +35,15 @@ function diceRoll() {
         var randomWeapon = Math.floor(Math.random()*lightWeapon.length);
         document.getElementById("rollThree").innerHTML = lightWeapon[randomWeapon];
 
-        var randomGadgetsOne = Math.floor(Math.random()*lightGadgets.length);
-        var randomGadgetsTwo = Math.floor(Math.random()*lightGadgets.length);
-        var randomGadgetsThree = Math.floor(Math.random()*lightGadgets.length);
-        document.getElementById("rollFour").innerHTML = lightGadgets[randomGadgetsOne];
-        document.getElementById("rollFourOne").innerHTML = lightGadgets[randomGadgetsTwo];
-        document.getElementById("rollFourTwo").innerHTML = lightGadgets[randomGadgetsThree];
-
-        if (lightGadgets[randomGadgetsTwo] === lightGadgets[randomGadgetsOne]) {
-
+        do {
+            var randomGadgetsOne = Math.floor(Math.random()*lightGadgets.length);
             var randomGadgetsTwo = Math.floor(Math.random()*lightGadgets.length);
-            document.getElementById("rollFourOne").innerHTML = lightGadgets[randomGadgetsTwo];
-        } else if (lightGadgets[randomGadgetsThree] === lightGadgets[randomGadgetsOne] ||lightGadgets[randomGadgetsThree] === lightGadgets[randomGadgetsTwo]) {
-
             var randomGadgetsThree = Math.floor(Math.random()*lightGadgets.length);
+            document.getElementById("rollFour").innerHTML = lightGadgets[randomGadgetsOne];
+            document.getElementById("rollFourOne").innerHTML = lightGadgets[randomGadgetsTwo];
             document.getElementById("rollFourTwo").innerHTML = lightGadgets[randomGadgetsThree];
+        } while ( randomGadgetsOne === randomGadgetsTwo || randomGadgetsOne === randomGadgetsThree || randomGadgetsTwo === randomGadgetsThree);
 
-        } else {
-
-            break;
-        }
     
     
     case "Medium":
@@ -65,25 +54,15 @@ function diceRoll() {
         var randomWeapon = Math.floor(Math.random()*mediumWeapon.length);
         document.getElementById("rollThree").innerHTML = mediumWeapon[randomWeapon];
 
-        var randomGadgetsOne = Math.floor(Math.random()*mediumGadgets.length);
-        var randomGadgetsTwo = Math.floor(Math.random()*mediumGadgets.length);
-        var randomGadgetsThree = Math.floor(Math.random()*mediumGadgets.length);
-        document.getElementById("rollFour").innerHTML = mediumGadgets[randomGadgetsOne];
-        document.getElementById("rollFourOne").innerHTML = mediumGadgets[randomGadgetsTwo];
-        document.getElementById("rollFourTwo").innerHTML = mediumGadgets[randomGadgetsThree];
-
-        if (randomGadgetsTwo === randomGadgetsOne) {
-
-            randomGadgetsTwo = Math.floor(Math.random()*mediumGadgets.length);
+        do{
+            var randomGadgetsOne = Math.floor(Math.random()*mediumGadgets.length);
+            var randomGadgetsTwo = Math.floor(Math.random()*mediumGadgets.length);
+            var randomGadgetsThree = Math.floor(Math.random()*mediumGadgets.length);
+            document.getElementById("rollFour").innerHTML = mediumGadgets[randomGadgetsOne];
             document.getElementById("rollFourOne").innerHTML = mediumGadgets[randomGadgetsTwo];
-        } else if (randomGadgetsThree === randomGadgetsTwo|| randomGadgetsThree === randomGadgetsOne) {
-            randomGadgetsThree = Math.floor(Math.random()*mediumGadgets.length);
             document.getElementById("rollFourTwo").innerHTML = mediumGadgets[randomGadgetsThree];
+        } while ( randomGadgetsOne === randomGadgetsTwo || randomGadgetsOne === randomGadgetsThree || randomGadgetsTwo === randomGadgetsThree);
 
-        } else {
-
-            break;
-        }
     
 
     case "Heavy":
@@ -101,19 +80,14 @@ function diceRoll() {
         document.getElementById("rollFourOne").innerHTML = heavyGadgets[randomGadgetsTwo];
         document.getElementById("rollFourTwo").innerHTML = heavyGadgets[randomGadgetsThree];
 
-        if (lightGadgets[randomGadgetsTwo] === heavyGadgets[randomGadgetsOne]) {
-
+        do {
+            var randomGadgetsOne = Math.floor(Math.random()*heavyGadgets.length);
             var randomGadgetsTwo = Math.floor(Math.random()*heavyGadgets.length);
-            document.getElementById("rollFourOne").innerHTML = heavyGadgets[randomGadgetsTwo];
-        } else if (heavyGadgets[randomGadgetsThree] == heavyGadgets[randomGadgetsOne] ||heavyGadgets[randomGadgetsThree] == heavyGadgets[randomGadgetsTwo]) {
-
             var randomGadgetsThree = Math.floor(Math.random()*heavyGadgets.length);
+            document.getElementById("rollFour").innerHTML = heavyGadgets[randomGadgetsOne];
+            document.getElementById("rollFourOne").innerHTML = heavyGadgets[randomGadgetsTwo];
             document.getElementById("rollFourTwo").innerHTML = heavyGadgets[randomGadgetsThree];
-
-        } else {
-
-            break;
-        }
+        } while ( randomGadgetsOne === randomGadgetsTwo || randomGadgetsOne === randomGadgetsThree || randomGadgetsTwo === randomGadgetsThree);
     }
     
 }
