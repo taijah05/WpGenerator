@@ -73,13 +73,6 @@ function diceRoll() {
         var randomWeapon = Math.floor(Math.random()*heavyWeapon.length);
         document.getElementById("rollThree").innerHTML = heavyWeapon[randomWeapon];
 
-        var randomGadgetsOne = Math.floor(Math.random()*heavyGadgets.length);
-        var randomGadgetsTwo = Math.floor(Math.random()*heavyGadgets.length);
-        var randomGadgetsThree = Math.floor(Math.random()*heavyGadgets.length);
-        document.getElementById("rollFour").innerHTML = heavyGadgets[randomGadgetsOne];
-        document.getElementById("rollFourOne").innerHTML = heavyGadgets[randomGadgetsTwo];
-        document.getElementById("rollFourTwo").innerHTML = heavyGadgets[randomGadgetsThree];
-
         do {
             var randomGadgetsOne = Math.floor(Math.random()*heavyGadgets.length);
             var randomGadgetsTwo = Math.floor(Math.random()*heavyGadgets.length);
